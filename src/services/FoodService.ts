@@ -1,5 +1,5 @@
 // src/services/FoodService.ts
-const API_URL = 'http://localhost:5000/api/food' // change if your backend is hosted elsewhere
+const API_URL = '/api/food' // change if your backend is hosted elsewhere
 
 export interface FoodEntry {
   type: 'good' | 'bad'

@@ -22,7 +22,7 @@
   import { formatReadableDatetime } from '@/utils/dateUtils'
   
   interface Entry {
-    id: string
+    id?: string
     type: 'good' | 'bad'
     notes?: string
     timestamp: string
