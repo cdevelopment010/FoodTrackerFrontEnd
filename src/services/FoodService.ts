@@ -19,7 +19,7 @@ export default {
     },
   
     async getAllFood(): Promise<FoodEntry[]> {
-      const res = await fetch(`${API_URL}/`)
+      const res = await fetch(`${API_URL}/log`)
       if (!res.ok) throw new Error('Failed to fetch food history')
       return res.json()
     },
