@@ -1,5 +1,5 @@
 // src/services/FoodService.ts
-const API_URL = '/api/food' // change if your backend is hosted elsewhere
+const API_URL = '/api' // change if your backend is hosted elsewhere
 
 export interface FoodEntry {
   type: 'good' | 'bad'| 'hypo'
@@ -9,7 +9,7 @@ export interface FoodEntry {
 
 export default {
     async addFood(entry: FoodEntry) {
-      const res = await fetch(API_URL, {
+      const res = await fetch(`${API_URL}/log`, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify(entry),
@@ -19,7 +19,7 @@ export default {
     },
   
     async getAllFood(): Promise<FoodEntry[]> {
-      const res = await fetch(API_URL)
+      const res = await fetch(`${API_URL}/`)
       if (!res.ok) throw new Error('Failed to fetch food history')
       return res.json()
     },
