@@ -42,7 +42,7 @@
   const submitEntry = async () => {
     try {
       await FoodService.addFood({
-        type: form.value.type,
+        type: form.value.type as "good" | "bad" | "hypo",
         notes: form.value.notes,
         timestamp: new Date(form.value.date).toISOString()
       })

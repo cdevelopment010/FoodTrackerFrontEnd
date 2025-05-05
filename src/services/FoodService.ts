@@ -2,7 +2,7 @@
 const API_URL = '/api/food' // change if your backend is hosted elsewhere
 
 export interface FoodEntry {
-  type: 'good' | 'bad'
+  type: 'good' | 'bad'| 'hypo'
   notes?: string
   timestamp: string // ISO string
 }

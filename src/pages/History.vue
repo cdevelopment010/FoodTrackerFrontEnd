@@ -23,7 +23,7 @@
   
   interface Entry {
     id?: string
-    type: 'good' | 'bad'
+    type: 'good' | 'bad' | 'hypo'
     notes?: string
     timestamp: string
   }
