@@ -39,7 +39,11 @@
     }
   }
   
-  const deleteEntry = async (id: string) => {
+  const deleteEntry = async (id?: string) => {
+    if (id == undefined) { 
+      alert("Missing ID to delete"); 
+      return;
+    }
     if (!confirm('Delete this entry?')) return
     try {
       await FoodService.deleteFood(id)
